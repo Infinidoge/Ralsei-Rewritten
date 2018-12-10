@@ -19,6 +19,8 @@ from utils.correction import command_correct
 from utils.spell_correct import correct
 
 from cogs.random_cog import Random
+from cogs.games_cog import Games
+from cogs.dnd_cog import DnD
 
 
 configuration = Config()
@@ -76,6 +78,7 @@ async def on_command_error(ctx, error):
         await ctx.send("<@%s>, You seem to be missing some arguments for that command." % ctx.message.author.id)
 
     else:
+        print(error)
         await ctx.send("<@%s>, I'm sorry, but i'm not sure how to respond to that..." % ctx.message.author.id)
 
 
@@ -101,5 +104,8 @@ async def shutdown(ctx):
     await ctx.send("See ya later!")
     await ralsei.close()
 
+
+ralsei.add_cog(DnD(ralsei))
+ralsei.add_cog(Games(ralsei))
 ralsei.add_cog(Random(ralsei))
 ralsei.ralsei_run()
