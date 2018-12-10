@@ -55,6 +55,6 @@ class DnD:
                                                          for i in self.GenStats.infinidoge_standard()]))))
 
     @dnd.command()
-    async def test(self, ctx):
+    async def crstats(self, ctx):
         await ctx.send("Critical Role Generation:\n"+str(self.GenStats.critrole_standard()))
 
