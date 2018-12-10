@@ -56,5 +56,5 @@ class DnD:
 
     @dnd.command()
     async def test(self, ctx):
-        await ctx.send(str(self.GenStats.critrole_standard()))
+        await ctx.send("Critical Role Generation:\n"+str(self.GenStats.critrole_standard()))
 
