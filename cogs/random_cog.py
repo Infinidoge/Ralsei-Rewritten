@@ -47,8 +47,8 @@ class Random:
                                       "+" if (mod > 0) else "-" if (mod < 0) else "",
                                       "" if (mod is 0) else str(mod),
                                       "+".join([str(i) for i in dice_block]),
-                                      "**%s%s**" % ("+" if (mod > 0) else "-" if (mod < 0) else "",
-                                                    "" if (mod is 0) else str(mod)),
+                                      "%s%s" % ("**+" if (mod > 0) else "**-" if (mod < 0) else "",
+                                                "" if (mod is 0) else str(mod)+"**"),
                                       str(sum(dice_block)+mod)))
 
         except ValueError:
@@ -67,6 +67,6 @@ class Random:
 
         choices = arg.split(", ")
 
-        await ctx.send("""[{0}]\n**Choices:** {1}\n**My Choice:**{2}
+        await ctx.send("""[{0}]\n**Choices:** {1}\n**My Choice: **{2}
                        """.format("<@%s>" % ctx.author.id,
                                   ", ".join(choices), random.choice(choices)))
