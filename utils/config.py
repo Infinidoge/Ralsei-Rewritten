@@ -23,7 +23,8 @@ class Config:
         config = ConfigParser(interpolation=ExtendedInterpolation())
 
         config["RalseiBase"] = {"token": "",
-                                "owner_id": ""}
+                                "owner_id": "",
+                                "app_id": ""}
         config["RalseiConfig"] = {"command_prefix": "!",
                                   "case_insensitive": "False",
                                   "pm_help": "False",

@@ -21,6 +21,7 @@ from utils.spell_correct import correct
 from cogs.random_cog import Random
 from cogs.games_cog import Games
 from cogs.dnd_cog import DnD
+from cogs.music_cog import Music
 
 
 configuration = Config()
@@ -108,4 +109,5 @@ async def shutdown(ctx):
 ralsei.add_cog(DnD(ralsei))
 ralsei.add_cog(Games(ralsei))
 ralsei.add_cog(Random(ralsei))
+ralsei.add_cog(Music(ralsei))
 ralsei.ralsei_run()
