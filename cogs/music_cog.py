@@ -1,22 +1,16 @@
-"""
-DISCLAIMER:
-Please understand Music bots are complex, and that even this basic example can be daunting to a beginner.
-For this reason it's highly advised you familiarize yourself with discord.py, python and asyncio, BEFORE
-you attempt to write a music bot.
-This example makes use of Python 3.6
-For a more basic voice example please read:
-    https://github.com/Rapptz/discord.py/blob/rewrite/examples/basic_voice.py
-"""
+# ----------------------------------
+# Ralsei/cogs/music_cog
+# Created by EvieePy (from https://github.com/Rapptz/discord.py/pull/922)
+# Modified by Infinidoge
+# ----------------------------------
+# Cog for Ralsei to play music and keep track of playlists
+# ----------------------------------
 import discord
 from discord.ext import commands
 
 import asyncio
 import async_timeout
 import youtube_dl
-
-import os
-import shutil
-
 
 if not discord.opus.is_loaded():
     discord.opus.load_opus('opus')
