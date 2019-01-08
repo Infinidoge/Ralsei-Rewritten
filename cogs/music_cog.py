@@ -12,6 +12,8 @@ import asyncio
 import async_timeout
 import youtube_dl
 
+from utils.misc import delete_contents
+
 if not discord.opus.is_loaded():
     discord.opus.load_opus('opus')
 
